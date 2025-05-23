@@ -21,26 +21,20 @@ To write a program to prepare EMI calculator using function without return type 
 float calculateEMI(float p, float r, int t) {
     r = r / 1200;
     float emi = (p * r * pow(1 + r, t)) / (pow(1 + r, t) - 1);
-    return emi;
+    printf("%d",emi);
 }
 
 int main() {
     float principal, rate, emi;
     int months;
-    
     printf("Enter principal amount: ");
     scanf("%f", &principal);
-    
     printf("Enter annual interest rate (%%): ");
     scanf("%f", &rate);
-    
     printf("Enter loan term in months: ");
     scanf("%d", &months);
-    
     emi = calculateEMI(principal, rate, months);
-    
     printf("Monthly EMI: %.2f\n", emi);
-    
     return 0;
 }
 ```
